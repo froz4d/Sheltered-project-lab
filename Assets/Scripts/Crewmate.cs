@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class Crewmate : MonoBehaviour
 {
+    [Header("Initial Setting")]
     [SerializeField] private int maxHp;
     [SerializeField] private int maxHunger;
     [SerializeField] private WorkType status;
+    
+    [Header("Trigger Value")]
     [SerializeField] private int hungerTrigger;
     
     private int hp;
