@@ -8,6 +8,7 @@ public class Crewmate : MonoBehaviour
     [SerializeField] private int maxHp;
     [SerializeField] private int maxHunger;
     [SerializeField] private WorkType status;
+    [SerializeField] private int hungerTrigger;
     
     private int hp;
     private float hunger;
@@ -38,6 +39,8 @@ public class Crewmate : MonoBehaviour
     private void Living()
     {
         hunger -= Time.deltaTime;
+        
+        if(hunger <= hungerTrigger) SetStatus(WorkType.hungry);
     }
     
     // - Public Method -
