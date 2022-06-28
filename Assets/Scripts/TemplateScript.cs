@@ -47,28 +47,27 @@ public class TemplateScript : MonoBehaviour
             //Vector2 mouseRay = Camera.main.ScreenToWorldPoint(transform.position);
             //raycast from camera infinite
             RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector2.zero, Mathf.Infinity,allTilesLayer);
-            StartCoroutine(delayConstruction());
-            
-            
-           
+
+
             //If Place == null you can place object //check by using raycast
-            if (rayHit.collider == null && this.gameObject.tag == "BoxTile" )
+            if (rayHit.collider == null && gameObject.CompareTag("BoxTile") )
             {
+                GameObject placedObject= Instantiate(finalObject, transform.position, Quaternion.identity);
+                Vector2 afterDelayPos = placedObject.transform.position;
                 
-                
-                Instantiate(finalObject, transform.position, Quaternion.identity);
-                
-                
+                StartCoroutine(DelayConstruction(afterDelayPos, placedObject));
             }
-            // Update is called once per frame
+            
+            
             
         }
     }
     
-    IEnumerator delayConstruction()
+    IEnumerator DelayConstruction(Vector2 position, GameObject go)
     {
         yield return new WaitForSeconds(4f);
-        Instantiate(afterdelay, transform.position, Quaternion.identity);
+        Destroy(go);
+        Instantiate(afterdelay, position, Quaternion.identity);
     }
     
     
