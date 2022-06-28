@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-
-
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
 
 
 public class TemplateScript : MonoBehaviour
@@ -18,7 +19,9 @@ public class TemplateScript : MonoBehaviour
     
     //variable
     private Vector2 mousePos;
-    
+
+    private Vector2 placeObject;
+
     //Build tick timer
     /*private int buildTick;
     private int buildTickMax;
@@ -55,6 +58,7 @@ public class TemplateScript : MonoBehaviour
                 
                 Instantiate(finalObject, transform.position, Quaternion.identity);
                 
+                
             }
             // Update is called once per frame
             
@@ -67,24 +71,5 @@ public class TemplateScript : MonoBehaviour
         Instantiate(afterdelay, transform.position, Quaternion.identity);
     }
     
-    //Time tick constructing
-    /*private void TimeTickSystem_OnTick(object sender, TimeTickSystem.OnTickEventArgs e)
-    {
-        if (isConstructing)
-        {
-            buildTick += 1;
-            if (buildTick >= buildTickMax)
-            {
-                //building is fully constructed
-                isConstructing = false;
-                constructingWorldBar.Hide();
-            }
-            else
-            {
-                //building is still under construction
-                constructingWorldBar.SetSize(buildTick * 1f / buildTickMax);
-            }
-        }
-    }
-    */
+    
 }
