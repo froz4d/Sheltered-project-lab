@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5684555292622116606}
-  - component: {fileID: 8785645759941226454}
   m_Layer: 7
   m_Name: BoxTemplate
-  m_TagString: BoxTile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,23 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8785645759941226454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5904289696980644604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c33023949237724d834c068ba107a9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  finalObject: {fileID: 1922143574476139783, guid: c543f80142bbea744843ed3b81d4d19c, type: 3}
-  allTilesLayer:
-    serializedVersion: 2
-    m_Bits: 384
-  afterdelay: {fileID: 3740554906078508702, guid: 883bba3a7cd4d414bae798ec666e28cb, type: 3}
 --- !u!1 &7007686280622706299
 GameObject:
   m_ObjectHideFlags: 0

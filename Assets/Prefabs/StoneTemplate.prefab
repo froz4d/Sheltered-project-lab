@@ -93,10 +93,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7590229324758265924}
-  - component: {fileID: 5890338715772974960}
   m_Layer: 9
   m_Name: StoneTemplate
-  m_TagString: StoneTile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,19 +116,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5890338715772974960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023948199460692465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc8660fe595a6246a62f9bd88986a89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  finalObject: {fileID: 4468867238646028471, guid: 3d4318c30d8d1354792602b9e35f3bfb, type: 3}
-  allTilesLayer:
-    serializedVersion: 2
-    m_Bits: 1536

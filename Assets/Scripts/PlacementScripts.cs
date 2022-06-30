@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using CodeMonkey;
-using CodeMonkey.Utils;
+using UnityEngine.UI;
+
 
 public class PlacementScripts : MonoBehaviour
 {
@@ -18,16 +19,14 @@ public class PlacementScripts : MonoBehaviour
     private bool isAnObjectSelected = false;
     
 
+    
+
     // Start selecting none object
     void Start()
     {
         selectedObjectInArray = 0;
+
         
-        //CodeMonkey code
-        TimeTickSystem.OnTick += delegate(object sender, TimeTickSystem.OnTickEventArgs e)
-        {
-            CMDebug.TextPopupMouse("tick: " + e.tick);
-        };
     }
 
     // Update is called once per frame
@@ -38,13 +37,14 @@ public class PlacementScripts : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 spawnPos = new Vector2(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
         
-        //If select E key it will select your object
+        //If select E key it will select your object เข้าสู่โหมดการส้ราง
         if (Input.GetKeyDown("e") && isAnObjectSelected == false)
         {
             //If press E key select Object
-            currentlySelectedObject =
-                (GameObject)Instantiate(selectableObjects[selectedObjectInArray], spawnPos, Quaternion.identity);
+            currentlySelectedObject = Instantiate(selectableObjects[selectedObjectInArray], spawnPos, Quaternion.identity);
             isAnObjectSelected = true;
+            
+            
         }
 
         
@@ -69,8 +69,7 @@ public class PlacementScripts : MonoBehaviour
             
             //change the item that we select to the next one
             Destroy(currentlySelectedObject);
-            currentlySelectedObject =
-                (GameObject)Instantiate(selectableObjects[selectedObjectInArray], spawnPos, Quaternion.identity);
+            currentlySelectedObject = Instantiate(selectableObjects[selectedObjectInArray], spawnPos, Quaternion.identity);
             
         }
         
@@ -85,10 +84,10 @@ public class PlacementScripts : MonoBehaviour
             }
             //change the item that we select to the next one
             Destroy(currentlySelectedObject);
-            currentlySelectedObject =
-                (GameObject)Instantiate(selectableObjects[selectedObjectInArray], spawnPos, Quaternion.identity);
+            currentlySelectedObject = Instantiate(selectableObjects[selectedObjectInArray], spawnPos, Quaternion.identity);
             
         }
+        //text.text = "" + count;
         
     }
 

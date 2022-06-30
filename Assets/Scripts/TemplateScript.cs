@@ -11,10 +11,10 @@ public class TemplateScript : MonoBehaviour
 {
     
     //costumize the object final build
-    [SerializeField] private GameObject finalObject;
+    [SerializeField] private GameObject bluePrint;
     [SerializeField] private LayerMask allTilesLayer;
     
-    [SerializeField] private GameObject afterdelay;
+    [SerializeField] private GameObject house;
 
     
     //variable
@@ -50,9 +50,11 @@ public class TemplateScript : MonoBehaviour
 
 
             //If Place == null you can place object //check by using raycast
-            if (rayHit.collider == null && gameObject.CompareTag("BoxTile") )
+            if (rayHit.collider == null && gameObject.CompareTag("BoxTile")) //gameObject.CompareTag
             {
-                GameObject placedObject= Instantiate(finalObject, transform.position, Quaternion.identity);
+                //Place first game object
+                GameObject placedObject = Instantiate(bluePrint, transform.position, Quaternion.identity);
+                //Receive the gameobject that placed to afterDelayPos
                 Vector2 afterDelayPos = placedObject.transform.position;
                 
                 StartCoroutine(DelayConstruction(afterDelayPos, placedObject));
@@ -63,11 +65,12 @@ public class TemplateScript : MonoBehaviour
         }
     }
     
+    //receive the Gameobject pos then instatiate the Final game object
     IEnumerator DelayConstruction(Vector2 position, GameObject go)
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
         Destroy(go);
-        Instantiate(afterdelay, position, Quaternion.identity);
+        Instantiate(house, position, Quaternion.identity);
     }
     
     

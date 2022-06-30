@@ -8,6 +8,7 @@ TagManager:
   - HouseTile
   - StoneTile
   - MissileTile
+  - PlatformTile
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - HouseTileLayer
   - StoneTileLayer
   - MissileTileLayer
-  - 
+  - PlatFormTileLayer
   - 
   - 
   - 

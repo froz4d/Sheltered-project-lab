@@ -5,8 +5,9 @@ using UnityEngine;
 public class MissileTemplate : MonoBehaviour
 {
     //costumize the object final build
-    [SerializeField] private GameObject finalObject;
+    [SerializeField] private GameObject missile;
     [SerializeField] private LayerMask allTilesLayer;
+    [SerializeField] private GameObject bluePrint;
 
 
     //variable
@@ -31,12 +32,21 @@ public class MissileTemplate : MonoBehaviour
 
 
             // Update is called once per frame
-            if (rayHit.collider == null && this.gameObject.tag == "StoneTile")
+            if (rayHit.collider == null && gameObject.CompareTag("StoneTile"))
             {
-                Instantiate(finalObject, transform.position, Quaternion.identity);
+                GameObject placedObject = Instantiate(bluePrint, transform.position, Quaternion.identity);
                 //Debug.Log("You did not place object");
+                Vector2 afterDelayPos = placedObject.transform.position;
+                
+                StartCoroutine(DelayConstruction(afterDelayPos, placedObject));
             }
 
         }
+    }
+    IEnumerator DelayConstruction(Vector2 position, GameObject go)
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(go);
+        Instantiate(missile, position, Quaternion.identity);
     }
 }
