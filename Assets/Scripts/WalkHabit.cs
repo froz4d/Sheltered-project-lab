@@ -13,6 +13,8 @@ public class WalkHabit : MonoBehaviour
     private bool selected;
    [SerializeField] private SpriteRenderer spriteRenderer;
    
+   
+   
    [Space(10)] 
    
    [Header("WallCheck")]
