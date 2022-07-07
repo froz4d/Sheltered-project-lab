@@ -40,14 +40,16 @@ public class objectPlacement : MonoBehaviour
                 
                 StartCoroutine(DelayConstruction(afterDelayPos, placedObject));
             }
-            if (rayHit.collider == null && gameObject.CompareTag("platformTag"))
-            {
-                GameObject placedObject = Instantiate(bluePrint, transform.position, Quaternion.identity);
-                //Debug.Log("You did not place object");
-                Vector2 afterDelayPos = placedObject.transform.position;
-                
-                StartCoroutine(DelayConstruction(afterDelayPos, placedObject));
-            }
+            
+            
+            // if (rayHit.collider == null && gameObject.CompareTag("platformTag"))
+            // {
+            //     GameObject placedObject = Instantiate(bluePrint, transform.position, Quaternion.identity);
+            //     //Debug.Log("You did not place object");
+            //     Vector2 afterDelayPos = placedObject.transform.position;
+            //     
+            //     StartCoroutine(DelayConstruction(afterDelayPos, placedObject));
+            // }
 
         }
     }

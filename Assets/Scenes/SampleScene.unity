@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 932478508}
   - component: {fileID: 932478507}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Placement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,7 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b854de4abe8536e46af69144b366ea35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableObjects: []
+  selectableObjects:
+  - {fileID: 4795359444969416906, guid: cc55e7c2b3b9b774dbb8578114ff89ca, type: 3}
+  - {fileID: 1376890006491046502, guid: 104979663679d024e8ddcd589966dba5, type: 3}
 --- !u!4 &932478508
 Transform:
   m_ObjectHideFlags: 0

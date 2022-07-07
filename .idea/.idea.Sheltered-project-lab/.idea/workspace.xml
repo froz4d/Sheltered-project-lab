@@ -2,42 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f85ecaa0-7f14-4f83-b4a4-cacec4d0b938" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Characters.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Characters/Stickman.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Characters/Stickman/Stick_Head.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Characters/Stickman/Stick_Head.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Items &amp; Icons.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Items &amp; Icons/Cute.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Items &amp; Icons/Cute/Crate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Items &amp; Icons/Cute/Crate.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Items &amp; Icons/Grungy.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Items &amp; Icons/Pixel Art.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Items &amp; Icons/Pixel Art/Coin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Items &amp; Icons/Pixel Art/Coin.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Brackeys/2D Mega Pack/Items &amp; Icons/Stick Figure-like.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Box.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Box.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/HouseFinish.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/HouseFinish.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/HouseScripts.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/HouseScripts.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MissileFinish.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MissileFinish.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MissileScrpits.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/MissileScrpits.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite/Castle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite/Castle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite/MissileLauncher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite/MissileLauncher.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite/WoodCrate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprite/WoodCrate.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/objectPlacement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/objectPlacement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +81,7 @@
       <workItem from="1657157171818" duration="2532000" />
       <workItem from="1657190952027" duration="733000" />
       <workItem from="1657216516942" duration="187000" />
-      <workItem from="1657217297849" duration="391000" />
+      <workItem from="1657217297849" duration="766000" />
     </task>
     <servers />
   </component>
