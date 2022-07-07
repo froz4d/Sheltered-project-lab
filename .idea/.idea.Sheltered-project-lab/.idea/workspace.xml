@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f85ecaa0-7f14-4f83-b4a4-cacec4d0b938" name="Changes" comment="" />
+    <list default="true" id="f85ecaa0-7f14-4f83-b4a4-cacec4d0b938" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/coinCount.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/currencySystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/currencySystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/currencySystem.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -72,7 +80,8 @@
       <workItem from="1657089189545" duration="721000" />
       <workItem from="1657097158676" duration="2929000" />
       <workItem from="1657157171818" duration="2532000" />
-      <workItem from="1657190952027" duration="616000" />
+      <workItem from="1657190952027" duration="733000" />
+      <workItem from="1657216516942" duration="120000" />
     </task>
     <servers />
   </component>
