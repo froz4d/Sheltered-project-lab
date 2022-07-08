@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8586299003486519166}
-  - component: {fileID: 3509299527663000693}
+  - component: {fileID: -654470060626283939}
   m_Layer: 9
   m_Name: HouseScripts
   m_TagString: objectTag
@@ -117,7 +117,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3509299527663000693
+--- !u!114 &-654470060626283939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc8660fe595a6246a62f9bd88986a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  count: 100
+  TextMeshPro: {fileID: 0}
   placeObject: {fileID: 4795359444969416906, guid: 88b5d4adc2c59e14b8656f871833b2f3, type: 3}
   allTilesLayer:
     serializedVersion: 2

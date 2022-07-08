@@ -17,14 +17,15 @@ public class PlacementScripts : MonoBehaviour
     
     //automatically set to false
     private bool isAnObjectSelected = false;
-    
 
     
 
     // Start selecting none object
     void Start()
     {
+        //set array = 0;
         selectedObjectInArray = 0;
+        
 
         
     }
@@ -33,9 +34,11 @@ public class PlacementScripts : MonoBehaviour
     void Update()
     {
         
-        //Make it placetable and stick to the Grid By round it
+        //Make it place able and stick to the Grid By round it
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 spawnPos = new Vector2(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
+        
+
         
         //If select E key it will select your object เข้าสู่โหมดการส้ราง
         if (Input.GetKeyDown("e") && isAnObjectSelected == false)
@@ -43,7 +46,6 @@ public class PlacementScripts : MonoBehaviour
             //If press E key select Object
             currentlySelectedObject = Instantiate(selectableObjects[selectedObjectInArray], spawnPos, Quaternion.identity);
             isAnObjectSelected = true;
-            
             
         }
 
@@ -65,6 +67,8 @@ public class PlacementScripts : MonoBehaviour
             if (selectedObjectInArray > selectableObjects.Length - 1)
             {
                 selectedObjectInArray = 0;
+                
+
             }
             
             //change the item that we select to the next one
@@ -81,15 +85,17 @@ public class PlacementScripts : MonoBehaviour
             if (selectedObjectInArray < 0)
             {
                 selectedObjectInArray = selectableObjects.Length - 1;
+                
             }
             //change the item that we select to the next one
             Destroy(currentlySelectedObject);
             currentlySelectedObject = Instantiate(selectableObjects[selectedObjectInArray], spawnPos, Quaternion.identity);
             
         }
-        //text.text = "" + count;
+        
         
     }
+
 
     
 }       
