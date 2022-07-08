@@ -52,6 +52,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   bluePrint: {fileID: 4898909787304773891, guid: adc83019bc1152948ada4b5732821849, type: 3}
+  activeBlueprint: {fileID: 11400000, guid: 44702a5f876d4cc40af636ca1a9e5942, type: 2}
 --- !u!1 &2867468663919603971
 GameObject:
   m_ObjectHideFlags: 0

@@ -136,3 +136,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   bluePrint: {fileID: 4898909787304773891, guid: adc83019bc1152948ada4b5732821849, type: 3}
+  activeBlueprint: {fileID: 11400000, guid: b48dbccfa0c907f49a7ce2b9ff552119, type: 2}

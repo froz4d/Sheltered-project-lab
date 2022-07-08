@@ -8,6 +8,7 @@ TagManager:
   - MissileTag
   - BoxTag
   - objectTag
+  - object2Tag
   layers:
   - Default
   - TransparentFX

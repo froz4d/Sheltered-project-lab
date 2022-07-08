@@ -20,6 +20,8 @@ public class objectPlacement : MonoBehaviour
     [SerializeField] private GameObject placeObject;
     [SerializeField] private LayerMask allTilesLayer;
     [SerializeField] private GameObject bluePrint;
+
+    public ObjectScipts activeBlueprint;
     
 
 
@@ -39,7 +41,7 @@ public class objectPlacement : MonoBehaviour
         transform.position = new Vector2(Mathf.Round(mousePos.x), Mathf.Round(mousePos.y));
 
 
-        //Place the Object 
+        //Place the Object with mouse
         if (Input.GetMouseButtonDown(0))
         {
             
@@ -48,14 +50,14 @@ public class objectPlacement : MonoBehaviour
 
 
 
-            // Update is called once per frame
+            // Check if there is Object so we can place object
             if (rayHit.collider == null && gameObject.CompareTag("objectTag"))
             {
                 GameObject placedObject = Instantiate(bluePrint, transform.position, Quaternion.identity);
-                //Debug.Log("You did not place object");
+                
                 Vector2 afterDelayPos = placedObject.transform.position;
                 
-                StartCoroutine(DelayConstruction(afterDelayPos, placedObject));
+                StartCoroutine(DelayConstruction(afterDelayPos, placedObject, activeBlueprint.delay));
                 
                 count -= 1;
                 PlayerPrefs.SetInt("amount", count);
@@ -64,9 +66,10 @@ public class objectPlacement : MonoBehaviour
 
         }
     }
-    IEnumerator DelayConstruction(Vector2 position, GameObject go)
+    IEnumerator DelayConstruction(Vector2 position, GameObject go , float otherDelay)
     {
-        yield return new WaitForSeconds(2f);
+        
+        yield return new WaitForSeconds(otherDelay);
         Destroy(go);
         Instantiate(placeObject, position, Quaternion.identity);
     }
