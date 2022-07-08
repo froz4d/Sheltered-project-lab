@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class PlacementScripts : MonoBehaviour
+public class objectSelect : MonoBehaviour
 {
 
     private int selectedObjectInArray;
