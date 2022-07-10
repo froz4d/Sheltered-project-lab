@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 100
-  TextMeshPro: {fileID: 0}
+  TextMeshPro: {fileID: 7728496809389854278, guid: 0f7b777d4fca88248b3553d08c66293c, type: 3}
   placeObject: {fileID: 4795359444969416906, guid: 88b5d4adc2c59e14b8656f871833b2f3, type: 3}
   allTilesLayer:
     serializedVersion: 2

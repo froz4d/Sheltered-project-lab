@@ -10,11 +10,10 @@ public class objectPlacement : MonoBehaviour
 {
     
     
-    //Coincount
-    public int count = 100;
+    
+    //coin
+    public int count;
     public TextMeshProUGUI TextMeshPro;
-    
-    
     
     //costumize the object final build
     [SerializeField] private GameObject placeObject;
@@ -29,10 +28,7 @@ public class objectPlacement : MonoBehaviour
     private Vector2 mousePos;
 
 
-    private void Start()
-    {
-        count = PlayerPrefs.GetInt("amount");
-    }
+
 
     void Update()
     {
@@ -48,10 +44,14 @@ public class objectPlacement : MonoBehaviour
             //raycast from camera infinite
             RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector2.zero, Mathf.Infinity, allTilesLayer);
 
-
+            if (count <= 0)
+            {
+                Debug.Log("Can;t place this Object");
+                return;
+            }
 
             // Check if there is Object so we can place object
-            if (rayHit.collider == null && gameObject.CompareTag("objectTag"))
+            if (rayHit.collider == null && gameObject.CompareTag("objectTag") && count >= 0)
             {
                 GameObject placedObject = Instantiate(bluePrint, transform.position, Quaternion.identity);
                 
@@ -60,13 +60,19 @@ public class objectPlacement : MonoBehaviour
                 StartCoroutine(DelayConstruction(afterDelayPos, placedObject, activeBlueprint.delay));
                 
                 count -= 1;
-                PlayerPrefs.SetInt("amount", count);
             }
-            
+            // else
+            // {
+            //     Debug.Log("Yoinks");
+            // }
+
+
 
         }
+        TextMeshPro.text = "" + count;
+
     }
-    IEnumerator DelayConstruction(Vector2 position, GameObject go , float otherDelay)
+    IEnumerator DelayConstruction(Vector2 position, GameObject go, float otherDelay)
     {
         
         yield return new WaitForSeconds(otherDelay);

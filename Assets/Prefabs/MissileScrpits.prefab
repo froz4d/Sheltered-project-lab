@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 100
-  TextMeshPro: {fileID: 0}
+  TextMeshPro: {fileID: 7728496809389854278, guid: 0f7b777d4fca88248b3553d08c66293c, type: 3}
   placeObject: {fileID: 1376890006491046502, guid: 6d99a0e695545e04b936265d4bafc0ff, type: 3}
   allTilesLayer:
     serializedVersion: 2

@@ -25,9 +25,6 @@ public class objectSelect : MonoBehaviour
     {
         //set array = 0;
         selectedObjectInArray = 0;
-        
-
-        
     }
 
     // Update is called once per frame

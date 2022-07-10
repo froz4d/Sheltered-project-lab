@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 
@@ -14,6 +15,8 @@ public class ObjectScipts : ScriptableObject
     [SerializeField] private int _price;
 
     public int price => _price;
+    
+    public TextMeshProUGUI TextMeshPro;
 
     [SerializeField] private float _delay;
 
