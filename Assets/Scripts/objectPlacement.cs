@@ -1,9 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+
 
 
 public class objectPlacement : MonoBehaviour
@@ -29,6 +30,10 @@ public class objectPlacement : MonoBehaviour
 
 
 
+    void Start()
+    {
+        count = PlayerPrefs.GetInt("amount");
+    }
 
     void Update()
     {
@@ -59,17 +64,22 @@ public class objectPlacement : MonoBehaviour
                 
                 StartCoroutine(DelayConstruction(afterDelayPos, placedObject, activeBlueprint.delay));
                 
-                count -= 1;
+                
+                //TextMeshPro.text = "" + count;
+                count -= 2;
+                PlayerPrefs.SetInt("amount", count);
+                
+                
             }
             // else
             // {
             //     Debug.Log("Yoinks");
             // }
 
-
+           
 
         }
-        TextMeshPro.text = "" + count;
+        
 
     }
     IEnumerator DelayConstruction(Vector2 position, GameObject go, float otherDelay)

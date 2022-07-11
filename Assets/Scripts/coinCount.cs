@@ -14,7 +14,7 @@ public class coinCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //count = PlayerPrefs.GetInt("amount");
+        count = PlayerPrefs.GetInt("amount");
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class coinCount : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             count += 1;
-            //PlayerPrefs.SetInt("amount", count);
+            PlayerPrefs.SetInt("amount", count);
         }
         // if (Input.GetMouseButtonDown(0))
         // {
