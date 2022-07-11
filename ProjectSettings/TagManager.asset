@@ -4,10 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Ground
   - Ladder
   - Obstacle
   - Wall
+=======
+  - HouseTag
+  - MissileTag
+  - BoxTag
+  - objectTag
+  - object2Tag
+>>>>>>> origin/atomtest02
   layers:
   - Default
   - TransparentFX
@@ -15,10 +23,10 @@ TagManager:
   - Obstacle
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - HouseLayer
+  - MissileLayer
+  - BoxLayer
+  - objectLayer
   - 
   - 
   - 
