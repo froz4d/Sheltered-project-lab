@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
+using UnityEngine.Events;
+using Unity.UI;
+using TMPro;
 
 
 public class patrol : MonoBehaviour
@@ -18,6 +21,9 @@ public class patrol : MonoBehaviour
     public float minY;
     public float maxX;
     public float maxY;
+    
+    
+ 
 
 
 
@@ -26,12 +32,16 @@ public class patrol : MonoBehaviour
         waitTime = startWaitTime;
 
         moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        
+ 
 
     }
 
     //move character to random spot
     void Update()
     {
+
+        
         transform.position = Vector2.MoveTowards(transform.position, moveSpots.position, speed * Time.deltaTime);
         
         //wait for the character to travel to the random location first
@@ -48,4 +58,6 @@ public class patrol : MonoBehaviour
             }
         }
     }
+    
+
 }
