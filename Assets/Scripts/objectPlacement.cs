@@ -21,7 +21,7 @@ public class objectPlacement : MonoBehaviour
     [SerializeField] private LayerMask allTilesLayer;
     [SerializeField] private GameObject bluePrint;
 
-    public ObjectScipts activeBlueprint;
+    public objectprop activeBlueprint;
     
 
 

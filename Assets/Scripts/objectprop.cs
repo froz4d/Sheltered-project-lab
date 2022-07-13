@@ -6,7 +6,7 @@ using TMPro;
 
 
 [CreateAssetMenu(menuName = "build/object")]
-public class ObjectScipts : ScriptableObject
+public class objectprop : ScriptableObject
 {
     [SerializeField] private string _name;
 
