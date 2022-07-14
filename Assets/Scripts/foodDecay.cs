@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using Unity.UI;
+using UnityEngine.UI;
 using TMPro;
 
 public class foodDecay : MonoBehaviour
@@ -13,16 +13,17 @@ public class foodDecay : MonoBehaviour
     
     // [SerializeField] private patrol _survivalManager;
     // [SerializeField] private int _hungerMeter;
-    public TextMeshProUGUI TextMeshPro;
     
     
+    public float HungerPercent => _currentHunger / _maxHunger;
     
-    private float _currentHunger;
+    public float _currentHunger;
     // public float HungerPercent => _currentHunger / _maxHunger;
     void Start()
     {
         //food
         _currentHunger = _maxHunger;
+        
     }
 
     // Update is called once per frame
@@ -30,5 +31,13 @@ public class foodDecay : MonoBehaviour
     {
         //foood
         _currentHunger -= _hungerDepletionRate * Time.deltaTime;
+        
     }
+    
+    public void ReplenishFood(float hungerAmount, float etc)
+    {
+        _currentHunger += hungerAmount;
+        if (_currentHunger > _maxHunger) _currentHunger = _maxHunger;
+    }
+    
 }

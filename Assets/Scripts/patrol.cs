@@ -22,6 +22,8 @@ public class patrol : MonoBehaviour
     public float maxX;
     public float maxY;
     
+    public TextMeshProUGUI TextMeshPro;
+    
     
  
 
