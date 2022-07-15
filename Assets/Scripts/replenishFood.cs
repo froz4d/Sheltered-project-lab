@@ -17,19 +17,20 @@ public class replenishFood : MonoBehaviour
 
 
 
+
     //Player interact with Item and destroy it
     private void OnTriggerEnter2D(Collider2D collider)
     {
         //กันเหนียว
-        //if (!collider.gameObject.CompareTag("Player")) return;
+        if (!collider.gameObject.CompareTag("Player")) return;
 
-        var foodDecay = collider.gameObject.GetComponent<foodDecay>();
+        var patrol = collider.gameObject.GetComponent<foodDecay>();
 
         //กันเหนียวไว้ก่อน
-        if (foodDecay is null) return;
+        if (patrol is null) return;
         
         //put other replenish type
-        foodDecay.ReplenishFood(foodReplenish, etc);
+        patrol.ReplenishFood(foodReplenish, etc);
         Destroy(gameObject);
     }
 }

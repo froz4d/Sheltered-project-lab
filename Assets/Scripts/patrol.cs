@@ -6,6 +6,8 @@ using Vector2 = UnityEngine.Vector2;
 using UnityEngine.Events;
 using Unity.UI;
 using TMPro;
+using Image = UnityEngine.UI.Image;
+
 
 
 public class patrol : MonoBehaviour
@@ -22,27 +24,28 @@ public class patrol : MonoBehaviour
     public float maxX;
     public float maxY;
     
-    public TextMeshProUGUI TextMeshPro;
+  
     
     
- 
-
-
-
+   
+    
+  
+    
+    
     void Start()
     {
         waitTime = startWaitTime;
 
         moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
         
- 
 
+        
     }
 
     //move character to random spot
     void Update()
     {
-
+        
         
         transform.position = Vector2.MoveTowards(transform.position, moveSpots.position, speed * Time.deltaTime);
         
@@ -54,12 +57,19 @@ public class patrol : MonoBehaviour
                 waitTime = startWaitTime;
                 moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
             }
+            // if (waitTime <= 0 && _currentHunger <= 50)
+            // {
+            //     waitTime = startWaitTime;
+            //     moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+            // }
             else
             {
                 waitTime -= Time.deltaTime;
             }
         }
+
+
     }
-    
+
 
 }

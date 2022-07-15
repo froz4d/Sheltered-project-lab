@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class foodDecay : MonoBehaviour
+
 {
     //Food 
     [SerializeField] private float _maxHunger;
@@ -13,10 +14,13 @@ public class foodDecay : MonoBehaviour
     
     // [SerializeField] private patrol _survivalManager;
     // [SerializeField] private int _hungerMeter;
+    //food
+    public AIproperties fooddecay;
     
     
     public float HungerPercent => _currentHunger / _maxHunger;
     
+    //[]serealizeField private instead
     public float _currentHunger;
     // public float HungerPercent => _currentHunger / _maxHunger;
     void Start()
@@ -39,5 +43,6 @@ public class foodDecay : MonoBehaviour
         _currentHunger += hungerAmount;
         if (_currentHunger > _maxHunger) _currentHunger = _maxHunger;
     }
+
     
 }
