@@ -348,7 +348,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -636,8 +636,8 @@ RectTransform:
   m_Children:
   - {fileID: 1190609472}
   - {fileID: 446677161}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1709434585}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -656,7 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474677df15a6bb74dbde7ce706ffc358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _foodDecay: {fileID: 1709434587}
+  _foodDecay: {fileID: 1709434589}
   _hungerMeter: {fileID: 446677159}
 --- !u!1 &1620551989
 GameObject:
@@ -670,7 +670,7 @@ GameObject:
   - component: {fileID: 1620551991}
   - component: {fileID: 1620551990}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: food++
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -730,7 +730,7 @@ Transform:
   m_Children:
   - {fileID: 410545105}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709434582
 GameObject:
@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 1709434585}
   - component: {fileID: 1709434584}
   - component: {fileID: 1709434586}
-  - component: {fileID: 1709434587}
+  - component: {fileID: 1709434589}
   - component: {fileID: 1709434588}
   m_Layer: 0
   m_Name: Square
@@ -815,7 +815,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1237444907}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -838,22 +839,6 @@ MonoBehaviour:
   minY: 4.5
   maxX: -10
   maxY: -4.3
-  TextMeshPro: {fileID: 0}
---- !u!114 &1709434587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709434582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c8e7ee98c7ee8f4ca7615f936cb9713, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHunger: 100
-  _hungerDepletionRate: 5
-  _currentHunger: 0
 --- !u!61 &1709434588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -880,3 +865,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1709434589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709434582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8e7ee98c7ee8f4ca7615f936cb9713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHunger: 100
+  _hungerDepletionRate: 5
+  fooddecay: {fileID: 0}
+  _currentHunger: 0

@@ -16,4 +16,4 @@ MonoBehaviour:
   _fooddecay: 0
   TextMeshPro: {fileID: 0}
   _delay: 0
-  _type: 0
+  _type: 2
