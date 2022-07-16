@@ -20,10 +20,7 @@ public class AIproperties : ScriptableObject
     public int fooddecay => _fooddecay;
     
     public TextMeshProUGUI TextMeshPro;
-
-    [SerializeField] private float _delay;
-
-    public float delay => _delay;
+    
 
 
     [SerializeField]

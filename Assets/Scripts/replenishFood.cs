@@ -24,13 +24,13 @@ public class replenishFood : MonoBehaviour
         //กันเหนียว
         if (!collider.gameObject.CompareTag("Player")) return;
 
-        var foodDecay = collider.gameObject.GetComponent<foodDecay>();
+        var patrol = collider.gameObject.GetComponent<patrol>();
 
         //กันเหนียวไว้ก่อน
-        if (foodDecay is null) return;
+        if (patrol is null) return;
         
         //put other replenish type
-        foodDecay.ReplenishFood(foodReplenish, etc);
+        patrol.ReplenishFood(foodReplenish, etc);
         Destroy(gameObject);
     }
 }

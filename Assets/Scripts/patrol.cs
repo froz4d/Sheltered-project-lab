@@ -27,6 +27,12 @@ public class patrol : MonoBehaviour
     
     public Rigidbody2D rb;
     
+   //food
+   [SerializeField] private float _maxHunger;
+   public float _currentHunger;
+   [SerializeField] private float _hungerDepletionRate;
+   public float HungerPercent => _currentHunger / _maxHunger;
+    
   
     
     
@@ -40,6 +46,10 @@ public class patrol : MonoBehaviour
         waitTime = startWaitTime;
 
         moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        
+        //food
+        _currentHunger = _maxHunger;
+        
         
 
         
@@ -60,18 +70,26 @@ public class patrol : MonoBehaviour
                 waitTime = startWaitTime;
                 moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
             }
-            // if (waitTime <= 0 && _currentHunger <= 50)
-            // {
-            //     waitTime = startWaitTime;
-            //     moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-            // }
+            if (waitTime <= 0 && _currentHunger <= 20)
+            {
+                waitTime = startWaitTime;
+                // moveSpots.position = new Vector2((1.1, -1.1), (minY, maxY));
+                return;
+            }
             else
             {
                 waitTime -= Time.deltaTime;
             }
         }
+        //foood
+        _currentHunger -= _hungerDepletionRate * Time.deltaTime;
 
 
+    }
+    public void ReplenishFood(float hungerAmount, float etc)
+    {
+        _currentHunger += hungerAmount;
+        if (_currentHunger > _maxHunger) _currentHunger = _maxHunger;
     }
 
 

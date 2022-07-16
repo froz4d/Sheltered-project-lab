@@ -8,7 +8,7 @@ using Image = UnityEngine.UI.Image;
 public class UIManager : MonoBehaviour
 {
     //This script Make UI and Script Work together
-    [SerializeField] private foodDecay _foodDecay;
+    [SerializeField] private patrol _foodDecay;
     [SerializeField] private Image _hungerMeter;
 
     private void FixedUpdate()
