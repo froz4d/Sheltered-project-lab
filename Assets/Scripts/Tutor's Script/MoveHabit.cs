@@ -19,7 +19,11 @@ public class MoveHabit : MonoBehaviour
     private Vector2 _waypoint; //Waypoint for normal roaming
     public Vector2 waypoint => _waypoint; //In case of other class need to check use this
     
-    [SerializeField]private GameObject target; //Override waypoint by target
+    [SerializeField]private GameObject targetObj; //Override waypoint by target
+    [SerializeField] private GameObject _dummyTarget;
+    public GameObject dummyTarget => _dummyTarget;
+
+    private Vector2 target;
     
     //Walking-Related Variable
     private float x, y;
@@ -36,7 +40,7 @@ public class MoveHabit : MonoBehaviour
 
     private void Update()
     {
-        if (target == null)
+        if (targetObj == null)
         {
             MoveTo(waypoint);
         }
@@ -45,7 +49,7 @@ public class MoveHabit : MonoBehaviour
             MoveTo(target);
         }
 
-        if ((Vector2) transform.localPosition == waypoint && !stop)
+        if (((Vector2) transform.localPosition == waypoint || (Vector2) transform.localPosition == target) && !stop)
         {
             Debug.Log("STOP!");
             StartCoroutine(Cooldown());
@@ -89,12 +93,15 @@ public class MoveHabit : MonoBehaviour
 
     public void SetTarget(GameObject moveTo)
     {
-        target = moveTo;
+        targetObj = moveTo;
+        if (targetObj != null) target = new Vector2(targetObj.transform.localPosition.x, transform.localPosition.y);
+        else target = Vector2.zero;
     }
 
     IEnumerator Cooldown()
     {
         stop = true;
+        SetTarget(null);
         yield return new WaitForSeconds(2f);
         RandomWaypoint();
     }
