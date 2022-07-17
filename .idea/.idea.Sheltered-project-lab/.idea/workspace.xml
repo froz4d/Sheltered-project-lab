@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f85ecaa0-7f14-4f83-b4a4-cacec4d0b938" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/MoveHabit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/MoveHabit.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile Script.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile Script/BokeyProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile Script/BokeyProfile.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile Script/FloorProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile Script/FloorProfile.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile/Bokey_LowerDeck.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile/Bokey_LowerDeck.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile/Main Floor.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile/Main Floor.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crewmate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crewmate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/MoveHabit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/MoveHabit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile/Main Floor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutor's Script/Profile/Main Floor.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +91,7 @@
       <workItem from="1657348800662" duration="2582000" />
       <workItem from="1657432013345" duration="2901000" />
       <workItem from="1657526341000" duration="2300000" />
-      <workItem from="1658077467252" duration="4289000" />
+      <workItem from="1658077467252" duration="5046000" />
     </task>
     <servers />
   </component>
