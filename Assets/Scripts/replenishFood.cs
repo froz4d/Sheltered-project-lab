@@ -31,6 +31,6 @@ public class replenishFood : MonoBehaviour
         
         //put other replenish type
         patrol.ReplenishFood(foodReplenish, etc);
-        Destroy(gameObject);
+        // Destroy(gameObject);
     }
 }

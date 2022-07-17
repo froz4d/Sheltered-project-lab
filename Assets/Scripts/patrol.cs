@@ -6,6 +6,7 @@ using Vector2 = UnityEngine.Vector2;
 using UnityEngine.Events;
 using Unity.UI;
 using TMPro;
+using Unity.VisualScripting;
 using Image = UnityEngine.UI.Image;
 
 
@@ -32,7 +33,11 @@ public class patrol : MonoBehaviour
    public float _currentHunger;
    [SerializeField] private float _hungerDepletionRate;
    public float HungerPercent => _currentHunger / _maxHunger;
-    
+
+   
+
+   public float stoppingDistance;
+   private Transform target;
   
     
     
@@ -63,26 +68,53 @@ public class patrol : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, moveSpots.position, speed * Time.deltaTime);
         
         //wait for the character to travel to the random location first
-        if(Vector2.Distance(transform.position, moveSpots.position) < 0.2f)
+        if (Vector2.Distance(transform.position, moveSpots.position) < 5f)
         {
             if (waitTime <= 0)
             {
                 waitTime = startWaitTime;
                 moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+                // return;
             }
-            if (waitTime <= 0 && _currentHunger <= 20)
-            {
-                waitTime = startWaitTime;
-                // moveSpots.position = new Vector2((1.1, -1.1), (minY, maxY));
-                return;
-            }
+            
+            //this statement to make sure that time is slowly derease so that the Ai can move after waiting time
             else
             {
                 waitTime -= Time.deltaTime;
             }
         }
-        //foood
+        if (_currentHunger <= 50)
+        {
+            
+            target = GameObject.FindGameObjectWithTag("foodReplenish").GetComponent<Transform>();
+            if(Vector2.Distance(transform.position, target.position) > stoppingDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                if (_currentHunger > 90)
+                {
+                    //To make sure it does not stay at the same position to prevent inappropriate fucntion
+                    waitTime = startWaitTime;
+                    moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+                    // return;
+                }
+                
+
+            }
+            
+           
+
+        }
+        
+        
         _currentHunger -= _hungerDepletionRate * Time.deltaTime;
+        //foood
+
+        if (_currentHunger <= 0)
+        {
+            _currentHunger = _hungerDepletionRate * Time.deltaTime;
+        }
+        
+        
 
 
     }

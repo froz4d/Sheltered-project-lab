@@ -656,7 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474677df15a6bb74dbde7ce706ffc358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _foodDecay: {fileID: 1709434589}
+  _foodDecay: {fileID: 1709434586}
   _hungerMeter: {fileID: 446677159}
 --- !u!1 &1620551989
 GameObject:
@@ -743,8 +743,8 @@ GameObject:
   - component: {fileID: 1709434585}
   - component: {fileID: 1709434584}
   - component: {fileID: 1709434586}
-  - component: {fileID: 1709434589}
   - component: {fileID: 1709434588}
+  - component: {fileID: 1709434590}
   m_Layer: 0
   m_Name: Square
   m_TagString: Player
@@ -839,6 +839,10 @@ MonoBehaviour:
   minY: 4.5
   maxX: -10
   maxY: -4.3
+  rb: {fileID: 1709434590}
+  _maxHunger: 100
+  _currentHunger: 0
+  _hungerDepletionRate: 5
 --- !u!61 &1709434588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -865,19 +869,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1709434589
-MonoBehaviour:
+--- !u!50 &1709434590
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709434582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c8e7ee98c7ee8f4ca7615f936cb9713, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHunger: 100
-  _hungerDepletionRate: 5
-  fooddecay: {fileID: 0}
-  _currentHunger: 0
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
