@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2acd37c2272ed5c4393a9f88a824c1cd, type: 3}
   m_Name: Main Floor
   m_EditorClassIdentifier: 
-  FloorPlans:
-  - floorLevel: 1
-    groundLevel: -0.25
-  - floorLevel: 2
-    groundLevel: 0
+  localGroundLevel: -0.25
+  worldGroundLevel:
+  - -2.86535
+  - 3
