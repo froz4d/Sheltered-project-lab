@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 410545104}
   m_Layer: 0
   m_Name: ReplenishFood
-  m_TagString: Untagged
+  m_TagString: foodReplenish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 1620551990}
   m_Layer: 0
   m_Name: food++
-  m_TagString: Untagged
+  m_TagString: foodReplenish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -832,8 +832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32076c0ea8119fa4e83018eb907afcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  startWaitTime: 2
+  speed: 5
+  startWaitTime: 5
   moveSpots: {fileID: 708811659}
   minX: 9
   minY: 4.5
@@ -843,6 +843,7 @@ MonoBehaviour:
   _maxHunger: 100
   _currentHunger: 0
   _hungerDepletionRate: 5
+  stoppingDistance: 0
 --- !u!61 &1709434588
 BoxCollider2D:
   m_ObjectHideFlags: 0
