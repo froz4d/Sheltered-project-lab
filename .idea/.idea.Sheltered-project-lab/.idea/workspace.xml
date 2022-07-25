@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f85ecaa0-7f14-4f83-b4a4-cacec4d0b938" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/patrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/patrol.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +13,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/foodDecay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/patrol.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -93,6 +93,7 @@
       <workItem from="1657871271300" duration="5135000" />
       <workItem from="1657955737892" duration="5201000" />
       <workItem from="1658044871576" duration="7024000" />
+      <workItem from="1658767243736" duration="450000" />
     </task>
     <servers />
   </component>

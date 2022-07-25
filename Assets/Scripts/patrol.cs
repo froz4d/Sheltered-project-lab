@@ -1,43 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
-using UnityEngine.Events;
-using Unity.UI;
-using TMPro;
-using Unity.VisualScripting;
-using Image = UnityEngine.UI.Image;
+
 
 
 
 public class patrol : MonoBehaviour
 {
-
-    public float speed;
-    private float waitTime;
-    public float startWaitTime;
     
-
+    //AI properties
+    public float speed;
+    public float startWaitTime;
+    private float _waitTime;
+    
+    //movement 
     public Transform moveSpots;
     public float minX;
     public float minY;
     public float maxX;
     public float maxY;
+    private Transform _target;
     
-    
-    public Rigidbody2D rb;
     
    //food
+   [SerializeField] private float _hungerDepletionRate;
    [SerializeField] private float _maxHunger;
    public float _currentHunger;
-   [SerializeField] private float _hungerDepletionRate;
    public float HungerPercent => _currentHunger / _maxHunger;
-
+   public Rigidbody2D rb;
    
 
    public float stoppingDistance;
-   private Transform target;
+   
   
     
     
@@ -48,9 +41,9 @@ public class patrol : MonoBehaviour
     
     void Start()
     {
-        waitTime = startWaitTime;
+        _waitTime = startWaitTime;
 
-        moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        moveSpots.position = new Vector2(Random.Range(minX, maxX),Random.Range(minY, maxY));
         
         //food
         _currentHunger = _maxHunger;
@@ -68,11 +61,11 @@ public class patrol : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, moveSpots.position, speed * Time.deltaTime);
         
         //wait for the character to travel to the random location first
-        if (Vector2.Distance(transform.position, moveSpots.position) < 5f)
+        if (Vector2.Distance(transform.position, moveSpots.position) < 10f)
         {
-            if (waitTime <= 0)
+            if (_waitTime <= 0)
             {
-                waitTime = startWaitTime;
+                _waitTime = startWaitTime;
                 moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
                 // return;
             }
@@ -80,20 +73,20 @@ public class patrol : MonoBehaviour
             //this statement to make sure that time is slowly derease so that the Ai can move after waiting time
             else
             {
-                waitTime -= Time.deltaTime;
+                _waitTime -= Time.deltaTime;
             }
         }
         if (_currentHunger <= 50)
         {
             
-            target = GameObject.FindGameObjectWithTag("foodReplenish").GetComponent<Transform>();
-            if(Vector2.Distance(transform.position, target.position) > stoppingDistance)
+            _target = GameObject.FindGameObjectWithTag("foodReplenish").GetComponent<Transform>();
+            if(Vector2.Distance(transform.position, _target.position) > stoppingDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, _target.position, speed * Time.deltaTime);
                 if (_currentHunger > 90)
                 {
                     //To make sure it does not stay at the same position to prevent inappropriate fucntion
-                    waitTime = startWaitTime;
+                    _waitTime = startWaitTime;
                     moveSpots.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
                     // return;
                 }
