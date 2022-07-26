@@ -15,31 +15,31 @@ public class MoveHabit : MonoBehaviour
     [Header("Profile")]
     [SerializeField] private BokeyProfile _bokey; //Depend on bokey TODO: Apply to OnTriggerEnter
     [SerializeField] private FloorProfile _floor; //Main Profile Setting for Floor Plan
-    
-    private Vector2 _waypoint; //Waypoint for normal roaming
-    public Vector2 waypoint => _waypoint; //In case of other class need to check use this
-    
-    [SerializeField]private GameObject targetObj; //Override waypoint by target
+    [Space(10)]
+    [SerializeField] private GameObject targetObj; //Override waypoint by target
     [SerializeField] private GameObject _dummyTarget;
-    public GameObject dummyTarget => _dummyTarget;
-    [SerializeField] private Rigidbody2D rb;
-
-    private Vector2 ladderPosition;
-
-    private Vector2 target;
-
-    [Header("System Disable Panel")] [SerializeField]
-    private bool destinationCheck = false;
     
-    //Walking-Related Variable
-    private float x, y;
-    private bool stop = false;
+    [SerializeField] private Rigidbody2D rb;
+    
+    [Header("System Disable Panel")] 
+    [SerializeField] private bool destinationCheck = false;
 
     //Elevate-Related
     [Header("Debug Menu")]
-    [SerializeField]private bool needLadder = false;
-    [SerializeField]private elevateMode elevateRequirement = elevateMode.None;
-    [SerializeField]private bool climbing = false;
+    [SerializeField] private bool needLadder = false;
+    [SerializeField] private elevateMode elevateRequirement = elevateMode.None;
+    [SerializeField] private bool climbing = false;
+
+    //Walking-Related Variable
+    private float x, y;
+    private bool stop = false;
+    private Vector2 _waypoint; //Waypoint for normal roaming
+    private Vector2 ladderPosition;
+    private Vector2 target;
+
+    //Public Get
+    public Vector2 waypoint => _waypoint; //In case of other class need to check use this
+    public GameObject dummyTarget => _dummyTarget;
     
     public enum elevateMode
     {
