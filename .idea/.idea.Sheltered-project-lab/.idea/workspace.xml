@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f85ecaa0-7f14-4f83-b4a4-cacec4d0b938" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/objectprop.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/objectprop.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/objectproperties.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/objectproperties.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MissileScrpits.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MissileScrpits.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/coinCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/coinCount.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/objectPlacement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/objectPlacement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/objectScipts.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/objectScipts.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/objectSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/objectSelect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/objectprop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/objectprop.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +93,7 @@
       <workItem from="1657432013345" duration="2901000" />
       <workItem from="1657526341000" duration="2300000" />
       <workItem from="1657608218883" duration="786000" />
+      <workItem from="1658927189052" duration="664000" />
     </task>
     <servers />
   </component>

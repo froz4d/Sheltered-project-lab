@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class coinCount : MonoBehaviour
 {
@@ -25,17 +22,7 @@ public class coinCount : MonoBehaviour
             count += 1;
             PlayerPrefs.SetInt("amount", count);
         }
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     count -= 1;
-        //     //PlayerPrefs.SetInt("amount", count);
-        // }
-        // if (count <= 0)
-        // {
-        //     Debug.Log("Can't place this object");              
-        // }
-
-
+        
         TextMeshPro.text = "" + count;
     }
     

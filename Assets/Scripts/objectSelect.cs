@@ -1,23 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 
 public class objectSelect : MonoBehaviour
 {
-
-    private int selectedObjectInArray;
-    private GameObject currentlySelectedObject;
-
     //set array
     [SerializeField] private GameObject[] selectableObjects;
     
-    //automatically set to false
+    
+    private int selectedObjectInArray;
     private bool isAnObjectSelected = false;
-
+    private GameObject currentlySelectedObject;
     
 
     // Start selecting none object

@@ -1,16 +1,12 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 
 
 public class objectPlacement : MonoBehaviour
 {
-    
-    
     
     //coin
     public int count;
@@ -21,11 +17,8 @@ public class objectPlacement : MonoBehaviour
     [SerializeField] private LayerMask allTilesLayer;
     [SerializeField] private GameObject bluePrint;
 
-    public objectprop activeBlueprint;
-    
+    public objectproperties activeBlueprint;
 
-
-    //variable
     private Vector2 mousePos;
 
 
@@ -51,7 +44,7 @@ public class objectPlacement : MonoBehaviour
 
             if (count <= 0)
             {
-                Debug.Log("Can;t place this Object");
+                Debug.Log("Can't place this Object");
                 return;
             }
 
@@ -71,13 +64,7 @@ public class objectPlacement : MonoBehaviour
                 
                 
             }
-            // else
-            // {
-            //     Debug.Log("Yoinks");
-            // }
-
-           
-
+            
         }
         
 
