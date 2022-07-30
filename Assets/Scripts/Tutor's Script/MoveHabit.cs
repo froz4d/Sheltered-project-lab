@@ -123,11 +123,6 @@ public class MoveHabit : MonoBehaviour
     {
         transform.localPosition = Vector2.MoveTowards(transform.localPosition, objective, speed * Time.deltaTime);
     }
-
-    // void MoveTo(GameObject objective) //Variant of Move to Position Command By use GameObject
-    // {
-    //     transform.localPosition = Vector2.MoveTowards(transform.localPosition, new Vector2(objective.transform.localPosition.x, transform.localPosition.y), speed * Time.deltaTime);
-    // }
     
     void RandomWaypoint()
     {
