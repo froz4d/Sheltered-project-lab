@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 
 
@@ -8,16 +7,14 @@ using UnityEngine;
 public class objectPlacement : MonoBehaviour
 {
     
-    //coin
-    public int count;
-    public TextMeshProUGUI TextMeshPro;
-    
+    private int _count;
+
     //costumize the object final build
     [SerializeField] private GameObject placeObject;
     [SerializeField] private LayerMask allTilesLayer;
     [SerializeField] private GameObject bluePrint;
 
-    public objectproperties activeBlueprint;
+    public objectproperties _objectproperties;
 
     private Vector2 mousePos;
 
@@ -25,7 +22,7 @@ public class objectPlacement : MonoBehaviour
 
     void Start()
     {
-        count = PlayerPrefs.GetInt("amount");
+        _count = PlayerPrefs.GetInt("amount");
     }
 
     void Update()
@@ -42,25 +39,25 @@ public class objectPlacement : MonoBehaviour
             //raycast from camera infinite
             RaycastHit2D rayHit = Physics2D.Raycast(transform.position, Vector2.zero, Mathf.Infinity, allTilesLayer);
 
-            if (count <= 0)
+            if (_count <= 0)
             {
                 Debug.Log("Can't place this Object");
                 return;
             }
 
             // Check if there is Object so we can place object
-            if (rayHit.collider == null && gameObject.CompareTag("objectTag") && count >= 0)
+            if (rayHit.collider == null && gameObject.CompareTag("objectTag") && _count >= 0)
             {
                 GameObject placedObject = Instantiate(bluePrint, transform.position, Quaternion.identity);
                 
                 Vector2 afterDelayPos = placedObject.transform.position;
                 
-                StartCoroutine(DelayConstruction(afterDelayPos, placedObject, activeBlueprint.delay));
+                StartCoroutine(DelayConstruction(afterDelayPos, placedObject, _objectproperties.delay));
                 
                 
                 //TextMeshPro.text = "" + count;
-                count -= 2;
-                PlayerPrefs.SetInt("amount", count);
+                _count -= 2;
+                PlayerPrefs.SetInt("amount", _count);
                 
                 
             }

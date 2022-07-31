@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8200281123779927139}
   - component: {fileID: 2961602950910960009}
-  - component: {fileID: 8852165866315348543}
+  - component: {fileID: 8151743383814396012}
   m_Layer: 9
   m_Name: WoodCrate
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8852165866315348543
+--- !u!61 &8151743383814396012
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

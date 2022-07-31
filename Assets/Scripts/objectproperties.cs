@@ -1,5 +1,4 @@
 using UnityEngine;
-using TMPro;
 
 
 
@@ -14,7 +13,6 @@ public class objectproperties : ScriptableObject
     public string name => _name;
     public int price => _price;
     public float delay => _delay;
-    public TextMeshProUGUI TextMeshPro;
     public Types type => _type;
     
     
@@ -26,6 +24,7 @@ public class objectproperties : ScriptableObject
         foodStation, 
         waterStation,
         barStation,
+        bogey,
         
         
     }

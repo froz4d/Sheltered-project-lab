@@ -3,15 +3,17 @@ using UnityEngine;
 
 public class coinCount : MonoBehaviour
 {
+    //cheat scripts 
+    //store coin in player pref(ฐานข้อมูล)
 
-    public int count = 100;
+    public int _count;
     public TextMeshProUGUI TextMeshPro;
     
     
     // Start is called before the first frame update
     void Start()
     {
-        count = PlayerPrefs.GetInt("amount");
+        _count = PlayerPrefs.GetInt("amount");
     }
 
     // Update is called once per frame
@@ -19,11 +21,11 @@ public class coinCount : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            count += 1;
-            PlayerPrefs.SetInt("amount", count);
+            _count += 1;
+            PlayerPrefs.SetInt("amount", _count);
         }
         
-        TextMeshPro.text = "" + count;
+        TextMeshPro.text = "" + _count;
     }
     
 }
