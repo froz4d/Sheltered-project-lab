@@ -1,10 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-
-
-
-public class objectPlacement : MonoBehaviour
+public class bogeyPlacement : MonoBehaviour
 {
     
     private int _count;
@@ -46,7 +43,7 @@ public class objectPlacement : MonoBehaviour
             }
 
             // Check if there is Object so we can place object
-            if (rayHit.collider == gameObject.CompareTag("objectTag"))
+            if (rayHit.collider == null && gameObject.CompareTag("objectTag") && _count >= 0)  //gameObject.CompareTag("objectTag") is when you select the object (this tag)
             {
                 GameObject placedObject = Instantiate(bluePrint, transform.position, Quaternion.identity);
                 

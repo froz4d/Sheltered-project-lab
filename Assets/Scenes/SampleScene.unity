@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f982c6d919c014789b480e87e22e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 100
+  _count: 0
   TextMeshPro: {fileID: 389286848}
 --- !u!114 &389286848 stripped
 MonoBehaviour:
@@ -439,6 +439,7 @@ MonoBehaviour:
   selectableObjects:
   - {fileID: 4795359444969416906, guid: cc55e7c2b3b9b774dbb8578114ff89ca, type: 3}
   - {fileID: 1376890006491046502, guid: 104979663679d024e8ddcd589966dba5, type: 3}
+  - {fileID: 3883658497717928690, guid: 3f223b2ce410a5b418d84fe2f4a9186e, type: 3}
 --- !u!4 &932478508
 Transform:
   m_ObjectHideFlags: 0
