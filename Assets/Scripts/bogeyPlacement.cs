@@ -43,7 +43,7 @@ public class bogeyPlacement : MonoBehaviour
             }
 
             // Check if there is Object so we can place object
-            if (rayHit.collider == null && gameObject.CompareTag("objectTag") && _count >= 0)  //gameObject.CompareTag("objectTag") is when you select the object (this tag)
+            if (rayHit.collider == null && _count >= 0)  //gameObject.CompareTag("objectTag") is when you select the object (this tag)
             {
                 GameObject placedObject = Instantiate(bluePrint, transform.position, Quaternion.identity);
                 
@@ -58,7 +58,7 @@ public class bogeyPlacement : MonoBehaviour
                 
                 
             }
-            
+
         }
         
 

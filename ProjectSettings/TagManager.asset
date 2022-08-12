@@ -9,6 +9,7 @@ TagManager:
   - BoxTag
   - objectTag
   - object2Tag
+  - bogeyTag
   layers:
   - Default
   - TransparentFX

@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f85ecaa0-7f14-4f83-b4a4-cacec4d0b938" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/bogeyPlacement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/bogeyPlacement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sheltered-project-lab/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BogeyBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BogeyBox.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BogeyFinish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BogeyFinish.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BogeyScipts.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BogeyScipts.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HouseFinish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/HouseFinish.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MissileFinish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MissileFinish.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SciptableObject/bogey.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SciptableObject/bogey.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/bogeyPlacement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/bogeyPlacement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/coinCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/coinCount.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/objectPlacement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/objectPlacement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +100,11 @@
       <workItem from="1658927189052" duration="2508000" />
       <workItem from="1659079314053" duration="603000" />
       <workItem from="1659283266309" duration="3515000" />
-      <workItem from="1659345832793" duration="1430000" />
+      <workItem from="1659345832793" duration="2929000" />
+      <workItem from="1659597513811" duration="1015000" />
+      <workItem from="1659689130701" duration="1426000" />
+      <workItem from="1660285319667" duration="6391000" />
+      <workItem from="1660324888076" duration="431000" />
     </task>
     <servers />
   </component>

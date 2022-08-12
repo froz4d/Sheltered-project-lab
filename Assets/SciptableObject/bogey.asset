@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: bogey
   _price: 0
-  _delay: 2
+  _delay: 0.5
   _type: 0

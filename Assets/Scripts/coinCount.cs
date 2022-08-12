@@ -21,7 +21,7 @@ public class coinCount : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            _count += 1;
+            _count += 5;
             PlayerPrefs.SetInt("amount", _count);
         }
         

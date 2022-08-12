@@ -46,7 +46,7 @@ public class objectPlacement : MonoBehaviour
             }
 
             // Check if there is Object so we can place object
-            if (rayHit.collider == gameObject.CompareTag("objectTag"))
+            if (rayHit.collider == gameObject.CompareTag("objectTag") && _count >= 0)
             {
                 GameObject placedObject = Instantiate(bluePrint, transform.position, Quaternion.identity);
                 
@@ -61,6 +61,7 @@ public class objectPlacement : MonoBehaviour
                 
                 
             }
+
             
         }
         

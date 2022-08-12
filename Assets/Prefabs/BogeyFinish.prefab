@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 2263187534776224509}
   m_Layer: 9
   m_Name: Crate
-  m_TagString: Untagged
+  m_TagString: bogeyTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
